@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-05-2024 a las 03:03:50
--- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.2.4
+-- Tiempo de generación: 30-05-2024 a las 04:38:34
+-- Versión del servidor: 10.4.25-MariaDB
+-- Versión de PHP: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -31,7 +31,15 @@ CREATE TABLE `artistas` (
   `id` int(11) NOT NULL,
   `nombre` varchar(100) NOT NULL,
   `descripción` varchar(300) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `artistas`
+--
+
+INSERT INTO `artistas` (`id`, `nombre`, `descripción`) VALUES
+(1, 'bad bunny', 'Benito Antonio Martínez Ocasio,conocido universalmente como Bad Bunny, es un interprete y compositor de musica urbana puertorriqueño. Se le considera uno de los principales nombres del panorama actual del rap, trap y regueton en español.'),
+(2, 'kevin kaarl', 'Kevin Eduardo Hernández Carlos,Kevin y su hermano gemelo, Bryan, empezaron en el mundo de la música, tocando instrumentos como guitarra y trompeta y formando parte de distintas bandas de Meoqui.');
 
 -- --------------------------------------------------------
 
@@ -43,7 +51,7 @@ CREATE TABLE `artistas_canciones` (
   `id` int(11) NOT NULL,
   `artistas_id` int(11) NOT NULL,
   `canciones_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -59,7 +67,7 @@ CREATE TABLE `canciones` (
   `fecha` date NOT NULL,
   `activo` tinyint(1) NOT NULL,
   `foto` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -71,7 +79,7 @@ CREATE TABLE `favoritas` (
   `id` int(11) NOT NULL,
   `usuarios_id` int(11) NOT NULL,
   `canciones_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -82,7 +90,21 @@ CREATE TABLE `favoritas` (
 CREATE TABLE `generos` (
   `id` int(11) NOT NULL,
   `nombre` varchar(150) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `generos`
+--
+
+INSERT INTO `generos` (`id`, `nombre`) VALUES
+(1, 'electronica'),
+(2, 'banda'),
+(3, 'clasica'),
+(4, 'jazz'),
+(5, 'rock and roll\r\n'),
+(6, 'pop'),
+(7, 'rap'),
+(8, 'disco');
 
 -- --------------------------------------------------------
 
@@ -94,7 +116,16 @@ CREATE TABLE `membresías` (
   `id` int(11) NOT NULL,
   `descripción` varchar(100) NOT NULL,
   `precio` double NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `membresías`
+--
+
+INSERT INTO `membresías` (`id`, `descripción`, `precio`) VALUES
+(1, 'free', 0),
+(2, 'premium', 100),
+(3, 'familiar', 70);
 
 -- --------------------------------------------------------
 
@@ -110,7 +141,7 @@ CREATE TABLE `playlist` (
   `total_canciones` int(11) NOT NULL,
   `descripción` varchar(200) NOT NULL,
   `publico` tinyint(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -123,7 +154,7 @@ CREATE TABLE `playlist_canciones` (
   `playlist_id` int(11) NOT NULL,
   `canciones_id` int(11) NOT NULL,
   `usuarios_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -136,7 +167,7 @@ CREATE TABLE `usuarios` (
   `nombre` varchar(100) NOT NULL,
   `correo` varchar(150) NOT NULL,
   `membresia_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Índices para tablas volcadas
@@ -214,7 +245,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `artistas`
 --
 ALTER TABLE `artistas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `artistas_canciones`
@@ -238,7 +269,7 @@ ALTER TABLE `favoritas`
 -- AUTO_INCREMENT de la tabla `generos`
 --
 ALTER TABLE `generos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `playlist`
