@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-05-2024 a las 04:38:34
--- Versión del servidor: 10.4.25-MariaDB
--- Versión de PHP: 8.1.10
+-- Tiempo de generación: 04-06-2024 a las 03:48:57
+-- Versión del servidor: 10.1.39-MariaDB
+-- Versión de PHP: 7.3.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -39,7 +40,15 @@ CREATE TABLE `artistas` (
 
 INSERT INTO `artistas` (`id`, `nombre`, `descripción`) VALUES
 (1, 'bad bunny', 'Benito Antonio Martínez Ocasio,conocido universalmente como Bad Bunny, es un interprete y compositor de musica urbana puertorriqueño. Se le considera uno de los principales nombres del panorama actual del rap, trap y regueton en español.'),
-(2, 'kevin kaarl', 'Kevin Eduardo Hernández Carlos,Kevin y su hermano gemelo, Bryan, empezaron en el mundo de la música, tocando instrumentos como guitarra y trompeta y formando parte de distintas bandas de Meoqui.');
+(2, 'kevin kaarl', 'Kevin Eduardo Hernández Carlos,Kevin y su hermano gemelo, Bryan, empezaron en el mundo de la música, tocando instrumentos como guitarra y trompeta y formando parte de distintas bandas de Meoqui.'),
+(3, 'Feid', 'El Ferxxo es el artista del momento el cantautor, rapero y productor colombiano de reggaetón y cumbia Feid canta con un estilo reconocible al instante.'),
+(4, 'Ariana Grande', 'Esta artista de Florida también se hizo famosa cuando era solo una adolescente de la mando e Nickelodeon y desde entonces, gracias a su música, su trabajo como actriz y a la creación de su propia marca de productos de belleza y maquillaje acumula en Instagram 378 millones de seguidores.'),
+(5, 'Beyoncé ', 'La de Atlanta no necesita presentación alguna y bien lo saben sus más de 318 millones de seguidores en la red social de las fotografías.'),
+(6, 'Justin Bieber', 'Justin Bieber ocupa el cuarto puesto en general y el primero de la categoría masculina. La estrella del pop estadounidense suma en estos momentos 292 millones de seguidores en la red social de la camarita.'),
+(7, 'Taylor Swift', 'El top 5 de cantantes más seguidos en Instagram lo cierra Taylor Swift. Más de 270 swifties de todo el mundo siguen y apoyan a su musa en esta red social día tras día convirtiéndola en la quinta artista más seguida de todo el mundo.'),
+(8, 'Jennifer Lopez', 'Tras Taylor Swift se sitúa Jennifer Lopez. La autora de On the Floor, Una noche más y Let\'s Get Loud acumula en Instagram más de 250 millones de seguidores que le otorgan el sexto puesto en este ranking de cantantes famosos en las redes sociales.'),
+(9, 'Nicki Minaj', ' La séptima artista con más seguidores del mundo es la rapera Nicki Minaj que suma en agosto de 2023 un total de 225,1 millones de followers en Instagram.'),
+(10, ' Katy Perry', 'A la cantante estadounidense Katy Perry la siguen en Instagram nada más y nada menos que 204,49 millones de personas. Gracias a temas como Harleys in Hawaii, Roar y California Gurls la artista de Santa Bárbara es la novena con más fans en esta red social de Mark Zuckerberg.');
 
 -- --------------------------------------------------------
 
@@ -245,7 +254,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `artistas`
 --
 ALTER TABLE `artistas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `artistas_canciones`
