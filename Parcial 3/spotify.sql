@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-06-2024 a las 03:48:57
+-- Tiempo de generación: 05-06-2024 a las 02:53:53
 -- Versión del servidor: 10.1.39-MariaDB
 -- Versión de PHP: 7.3.5
 
@@ -77,6 +77,27 @@ CREATE TABLE `canciones` (
   `activo` tinyint(1) NOT NULL,
   `foto` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `canciones`
+--
+
+INSERT INTO `canciones` (`id`, `nombre`, `genero_id`, `duración`, `fecha`, `activo`, `foto`) VALUES
+(1, 'luna', 6, '00:03:30', '2022-08-10', 50, ''),
+(2, 'normal', 2, '00:04:00', '2021-04-10', 24, ''),
+(3, 'fumeteo', 6, '00:03:45', '2021-10-06', 28, ''),
+(4, 'si tu supieras', 6, '00:02:52', '2022-09-11', 60, ''),
+(5, 'alakran', 7, '00:03:07', '2021-09-13', 50, ''),
+(6, 'bubalu', 6, '00:03:16', '2022-12-01', 57, ''),
+(7, 'no digas na', 8, '00:02:47', '2023-07-08', 89, ''),
+(8, 'brickell', 6, '00:03:51', '2019-12-15', 125, ''),
+(9, 'aguante', 8, '00:02:44', '2020-03-28', 30, ''),
+(10, 'ateo', 8, '00:03:22', '2024-03-07', 34, ''),
+(11, 'belixe', 6, '00:03:01', '2024-04-23', 59, ''),
+(12, 'break up', 6, '00:03:00', '2022-10-05', 12, ''),
+(13, 'california', 7, '00:04:00', '2022-01-21', 32, ''),
+(14, 'castigo', 6, '00:02:03', '2022-10-10', 15, ''),
+(15, 'como duele', 8, '00:02:10', '2022-01-01', 46, '');
 
 -- --------------------------------------------------------
 
@@ -179,6 +200,22 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `nombre`, `correo`, `membresia_id`) VALUES
+(1, 'Angel Santiago Pou Mápula', 'angel.pou22@cetis107.edu.mx', 3),
+(2, 'Marco Antonio Guerrero Valle', 'marco.guerrero22@cetis107.edu.mx', 2),
+(3, 'Marco Uriel Aguiluz Ibarra', 'marco.aguiluz22@cetis107.edu.mx', 1),
+(4, 'Andrea Salas Beltran', 'andrea.salas22@cetis107.edu.mx', 3),
+(5, 'Diego Angel Chavez Guerra', 'diego.chavez22@cetis107.edu.mx', 3),
+(6, 'Ekain Israel Cervera Rodríguez', 'ekain.cervera22@cetis107.edu.mx', 1),
+(7, 'Camila García Ozuna', 'camila.garcia22@cetis107.edu.mx', 2),
+(8, 'Larissa Bejarano Felix', 'larissa.bejarano22@cetis107.edu.mx', 3),
+(9, 'Fernando Moreno Madrigal', 'fernando.moreno22@cetis107.edu.mx', 1),
+(10, 'Jaime Fernando Hernández Mendosa', 'jaime.hernandez22@cetis107.edu.mx', 2);
+
+--
 -- Índices para tablas volcadas
 --
 
@@ -266,7 +303,7 @@ ALTER TABLE `artistas_canciones`
 -- AUTO_INCREMENT de la tabla `canciones`
 --
 ALTER TABLE `canciones`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT de la tabla `favoritas`
@@ -296,7 +333,7 @@ ALTER TABLE `playlist_canciones`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Restricciones para tablas volcadas
