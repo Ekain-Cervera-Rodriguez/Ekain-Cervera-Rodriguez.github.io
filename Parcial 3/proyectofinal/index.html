@@ -5,8 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto Final Parcial #3</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/query-3.7.1.js"></script>
 </head>
 <body>
-    Cervera Rodríguez Ekain Israel
+    <div class="container">
+        <h1>Proyecto Final Parcial 3</h1>
+        <div class="row mt-2">
+            <div class="col">
+                <h4>Consulta #1.Obtener listado de todos los alumnos de la facultad.</h4>
+                <p class="card">SELECT * FROM alumno;</p>
+                <img src="consulta1.png" alt="" class="img-fluid">
+            </div>
+            <div class="col">
+                <h4>Consulta #2.Obtener listado de todos los cursos(nombre) y su asignatura correspondiente.</h4>
+                <p class="card">SELECT curso.nombreDescriptivo , asignatura.nombre
+                    FROM curso
+                    INNER JOIN asignatura
+                    ON curso.idCurso = asignatura.curso;</p>
+                <img src="consulta2.png" alt="" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.js"></script>
 </body>
 </html>
+
