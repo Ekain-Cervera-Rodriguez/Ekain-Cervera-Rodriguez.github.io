@@ -12,11 +12,15 @@
     <div class="container">
         <h1>Proyecto Final Parcial 3</h1>
         <div class="row mt-2">
+        </div>
+    </div>
             <div class="col">
                 <h4>Consulta #1.Obtener listado de todos los alumnos de la facultad.</h4>
                 <p class="card">SELECT * FROM alumno;</p>
                 <img src="consulta1.png" alt="" class="img-fluid">
-            </div>
+            </div><br><br>
+
+
             <div class="col">
                 <h4>Consulta #2.Obtener listado de todos los cursos(nombre) y su asignatura correspondiente.</h4>
                 <p class="card">SELECT curso.nombreDescriptivo , asignatura.nombre
@@ -24,9 +28,73 @@
                     INNER JOIN asignatura
                     ON curso.idCurso = asignatura.curso;</p>
                 <img src="consulta2.png" alt="" class="img-fluid">
+            </div><br><br>
+
+
+            <div class="col">
+                <h4>Consulta #3.Obtener listado (nombbre y apellido) de alumnos que tengan beca.</h4>
+                <p class="card">SELECT alumno.nombre, alumno.apellido1, alumno.apellido2
+                    FROM alumno
+                    WHERE alumno.beca='si';</p>
+                <img src="consulta3.png" alt="" class="img-fluid">
+            </div><br><br>
+
+
+            <div class="col">
+                <h4>Consulta #4.Obtener listado de profesores,y su número de contacto.</h4>
+                <p class="card">SELECT profesor.nombre, profesor.apellido1, profesor.apellido2, tlfcontactoprof.telefono
+                    FROM profesor
+                    INNER JOIN tlfcontactoprof
+                    ON profesor.idProfesor=tlfcontactoprof.idProfesor;</p>
+                <img src="consulta4.png" alt="" class="img-fluid">
+            </div><br><br>
+
+
+            <div class="col">
+                <h4>Consulta #5.Obtener listado de alumnos (todos los campos) que están inscritos a la asignatura de programación.</h4>
+                <p class="card">SELECT alumno.*
+                    FROM alumno
+                    INNER JOIN matricula ON alumno.idAlumno = matricula.idAlumno
+                    INNER JOIN asignatura ON matricula.idAsignatura = asignatura.idAsignatura
+                    WHERE asignatura.nombre = "Programación"</p>
+                <img src="consulta5.png" alt="" class="img-fluid">
+            </div><br><br>
+
+
+            <div class="col">
+                <h4>Consulta #6.Obtener listado de profesores y las asignaturas que imparten.</h4>
+                <p class="card"></p>
+                <img src="consulta6.png" alt="" class="img-fluid">
+            </div><br><br>
+
+
+            <div class="col">
+                <h4>Consulta #7.Mostrar la asignatura que tiene más alumnos inscritos y su total.</h4>
+                <p class="card"></p>
+                <img src="consulta7.png" alt="" class="img-fluid">
+            </div><br><br>
+
+
+            <div class="col">
+                <h4>Consulta #8.Obtener listado de alumnos quew les da clase el rpofesor con ID PRO48 (Jose Manuel),sin importar en que asignatura esté inscrito.</h4>
+                <p class="card"></p>
+                <img src="consulta8.png" alt="" class="img-fluid">
+            </div><br><br>
+
+
+            <div class="col">
+                <h4>Consulta #9.Obtener listado de cursos, con asignatura y el maestro que las imparte.</h4>
+                <p class="card"></p>
+                <img src="consulta9.png" alt="" class="img-fluid">
+            </div><br><br>
+
+
+            <div class="col">
+                <h4>Consulta #10.Obtener listado de alumnos, con asignaturas que cursa, profesor que la imparte y curso al que pertenece.</h4>
+                <p class="card"></p>
+                <img src="consulta10.png" alt="" class="img-fluid">
             </div>
-        </div>
-    </div>
+
 
     <script src="js/bootstrap.js"></script>
 </body>
